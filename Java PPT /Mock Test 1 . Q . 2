@@ -1,2 +1,27 @@
 2. Write a Java program to print the Fibonacci series up to a given number using a for loop.
+import java.util.Scanner;
 
+public class Fibonacci {
+     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of terms in the Fibonacci series: ");
+        int input = scanner.nextInt();
+
+        int idx1 = 0, idx2 = 1;
+
+        System.out.print("Fibonacci Series: " + idx1 + " " + idx2);
+        //loop starts i = 2 until given number,the first two terms are already printed.
+        for (int i = 2; i < input; i++) {
+            int nextIdx = idx1 + idx2;
+
+            //first two terms are already printed remaining will print in this for loop.
+            System.out.print(" " + nextIdx);
+            
+            //the value of idx1 and idx2 are updated for the next iteration.
+            idx1 = idx2;
+            idx2 = nextIdx;
+        }
+        scanner.close();
+    }
+}
