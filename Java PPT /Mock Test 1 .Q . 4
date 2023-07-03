@@ -1,1 +1,47 @@
+4. Write a Java program to find the largest of three numbers using nested if-else statements
+import java.util.Scanner;
 
+public class LargestNumber {
+//public class FindLargest {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first number: ");
+        int first = scanner.nextInt();
+
+        System.out.print("Enter the second number: ");
+        int second = scanner.nextInt();
+
+        System.out.print("Enter tge third number: ");
+        int third = scanner.nextInt();
+
+        int largest;
+
+        // if (first > second || first > third) {
+        //     largest=first;
+        // } else if (second >= third) {
+        //     largest=second;
+        // } else {
+        //     largest=third;
+        // }
+        
+
+        if (first > second ) {
+            if (first > third) {
+                largest=first;
+            } else {
+                largest=third;
+            }
+        } else {
+            if (second > third) {
+                largest=second;
+            } else {
+                largest=third;
+            }
+        }
+
+        System.out.println("The largest number is: " + largest);
+
+        scanner.close();
+    }
+}
