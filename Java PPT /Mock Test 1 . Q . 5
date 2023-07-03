@@ -1,1 +1,17 @@
+5. Write a Java program to declare and initialize variables of different data types (int, double, String) with appropriate identifiers.
+
+
+public class VariableDeclaration {
+    public static void main(String[] args) {
+        // Variable declaration and initialization
+        int Num = 10;
+        double Double = 3.14;
+        String Str = "Hello, World!";
+
+        // Print the values of the variables
+        System.out.println("Number: " + Num);
+        System.out.println("Double: " + Double);
+        System.out.println("String: " + Str);
+    }
+}
 
