@@ -91,3 +91,88 @@ Utilization of idle time: Multithreading allows for the efficient utilization of
 Overall, multithreading in Java provides several advantages, including improved performance, enhanced responsiveness, efficient resource utilization, simplified program structure, support for asynchronous programming, and better utilization of idle time. 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q6.Write a program to create and call a custom exception
+
+Answer. - 
+package Codes;
+
+class CustomException extends Exception {
+    public CustomException(String message) {
+        super(message);
+    }
+}
+public class CustomExceptionExample {
+    // Method that throws the custom exception
+    static void divide(int num1, int num2) throws CustomException {
+        if (num2 == 0) {
+            throw new CustomException("Divide by zero error!");
+        }
+        int result = num1 / num2;
+        System.out.println("Result: " + result);
+    }
+    // Main method to test
+    public static void main(String[] args) {
+        int dividend = 10;
+        int divisor = 0;
+
+        try {
+            divide(dividend, divisor);
+        } catch (CustomException e) {
+            System.out.println("Exception " + e.getMessage());
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q7.How can you handle exceptions in Java?
+Answer.-
+In Java, exceptions can be handled by try-catch blocks or by using the throws clause.The two handle exceptions.
+1. Try-Catch Blocks:
+We can use try-catch blocks to catch and handle exceptions within your code. General syntax is
+try {
+     Code that might throw an exception
+} catch (ExceptionType1 e1) {
+          ExceptionType1
+} catch (ExceptionType2 e2) {
+          ExceptionType2
+} finally {
+         Executed regardless of an exception occurred or not
+}
+
+2. Throws Clause:
+We can use the throws clause to declare that a method may throw an exception without handling it within the method. Syntax is 
+public void myMethod() throws ExceptionType {
+    Code that might throw an exception
+}
+Both offer different ways to handle exceptions, depending on our requirements. The try-catch blocks allow us to catch and handle exceptions within the code, while the throws clause allows to sends the exception to the calling code for handling.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q8.What is Thread in Java?
+
+A thread is a process that can run concurrently with other threads. Threads share the same memory space and resources, but execute independently. This can run multiple tasks at the same time, which can improve the performance of application.
+
+There are two main types of threads : user threads and daemon threads. User threads are the default type of thread, and they are responsible for executing the main program. Daemon threads are used to perform background tasks, such as garbage collection.
+
+To create a thread, we can extend the Thread class or implement the Runnable interface. The Thread class provides a number of methods, such as start(), run(), and join().       Runnable interface is single method, run(), 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q9. What are the two ways of implementing thread in Java?
+Answer.-
+1. The two ways to implement a thread in Java is
+Extending Thread class: To create a class that extends the Thread class. The Thread class provides number of methods that can be used to control the thread, such as
+start() method, This starts the thread running, and the join() method, This waits for the thread to finish.
+
+2. Implementing the Runnable interface: To create a thread. We will create a class that implements the Runnable interface. The Runnable interface is single method,
+run(), This is the method that will be executed when the thread starts running.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q10.What do you mean by garbage collection?
+Answer.- 
+Garbage collection is a form of automatic memory management. The garbage collector attempts to reclaim memory which was allocated by the program, but are not in use; such memory is called garbage. 
+In computer science, garbage collection is a technique for managing memory in a way that avoids manual memory management. The garbage collector automatically deallocates memory that is no longer in use, This can help to improve performance and prevent memory wastage.
+The garbage collector keeps track of objects Which are still in use and which are not. When the garbage collector determines that an object is of no use, it deallocates the memory.
+Garbage collection is a valuable tool that can help to improve the performance and reliability of programs. However, it is important to be aware of the potential overhead that garbage collection can introduce.
+
