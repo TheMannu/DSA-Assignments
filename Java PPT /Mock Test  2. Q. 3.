@@ -1,0 +1,42 @@
+3. Create a class called Person with private properties like name, age, and address. Provide public getter and setter methods for these properties. Write a program that creates an instance of the Person class, sets values for its properties using the setter methods, and displays the values using the getter methods.
+Answer.- 
+package MockTestCodes;
+class Person {
+    public String name;
+    public int age;
+    public String address;
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public String getAddres() {
+        return address;
+    }
+    public void setAddres(String address) {
+        this.address = address;
+    }
+}
+public class PersonInfo {
+    public static void main(String[] args) {
+        Person person = new Person();
+
+        // setter methods
+        person.setName("John Doe");
+        person.setAge(25);
+        person.setAddres("123 Main Street");
+
+        // getter methods
+        System.out.println("Name  " + person.getName());
+        System.out.println("Age  " + person.getAge());
+        System.out.println("Address  " + person.getAddres());
+    }
+}
