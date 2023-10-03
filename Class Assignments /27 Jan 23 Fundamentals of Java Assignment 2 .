@@ -1,0 +1,87 @@
+1 . What is statically typed and Dynamically typed Programming Language ?
+Ans.Statically typed programming languages require explicit declaration of variable types before they are used. The type of a variable is determined at compile time and remains fixed throughout the program's execution. This allows for early error detection and can lead to better performance but can be more verbose.
+     Dynamically typed programming languages, on the other hand, do not require explicit type declarations. The type of a variable is determined at runtime, allowing for more flexibility and concise code. However, this flexibility can lead to runtime errors and potentially slower performance due to type checking during execution.
+
+2. What are variable in java?
+Ans. In Java, variables are named containers used to store data of different types. They are essential for storing and manipulating values within a program. Variables have a specific data type, such as int, double, boolean, or String, which determines the kind of data they can hold. They can be assigned initial values, and used in calculations and logical operations. Variables provide flexibility and enable dynamic behavior in Java programs. They are declared using a specific syntax, which includes the variable type, a name, and optionally an initial value. Variables can be local to a method or block of code or can be declared as class-level fields accessible throughout the class.
+
+3. How to Assign a value to Variable?
+Ans. For assigning a value to a variable in Java, we can use the assignment operator (=). Simply specify the variable name followed by the equals sign and the desired value. For example, to assign the value 10 to an integer variable named "num": int num = 10; This assigns the value 10 to the variable "num". The use of appropriate data type for the variable is must
+
+4.What are Primitive Data types in java?
+Ans.Primitive data types in Java are the basic building blocks for representing and manipulating simple values. There are eight primitive data types in Java:
+   Boolean : Represents a boolean value, either true or false.
+   Byte : Stores a small integer value ranging from -128 to 127.
+   Short : Holds an integer value between -32,768 and 32,767.
+   Int : Stores a whole number between -2,147,483,648 and 2,147,483,647.
+   Long : Represents a larger whole number ranging from -9,223,372,036,854,775,808 to        9,223,372,036,854,775,807.
+   float : Represents a decimal value with single precision.
+   Double : Stores a decimal value with double precision.
+   Char : Represents a single Unicode character.
+   These data types are used to declare variables and perform arithmetic operations.
+
+5. What are Identifiers in java?
+Ans.Identifiers are names used to identify variables, methods, classes, interfaces, and other program elements. They serve as labels or references for these entities within the program. An identifier can be composed of letters, digits, underscores, and dollar signs, but it must follow certain rules. It cannot start with a digit, it must not be a reserved keyword, and it should not contain any special characters or spaces. Identifiers are case-sensitive, meaning "myVariable" and "myvariable" are considered different. 
+
+6. List the Operators in java?
+Ans. In Java, operators are symbols or characters that are used to perform various operations on variables and values. Here is a list of operators in Java:
+
+Arithmetic Operators :
+Addition (+)
+Subtraction (-)
+Multiplication (*)
+Division (/)
+Modulus (%)
+Increment (++)
+Decrement (--)
+
+Relational Operators:
+Equal to (==)
+Not equal to (!=)
+Greater than (>)
+Less than (<)
+Greater than or equal to (>=)
+Less than or equal to (<=)
+
+Logical Operators:
+Logical AND (&&)
+Logical OR (||)
+Logical NOT (!)
+
+Assignment Operators:
+Simple assignment (=)
+Addition assignment (+=)
+Subtraction assignment (-=)
+Multiplication assignment (*=)
+Division assignment (/=)
+Modulus assignment (%=)
+
+Bitwise Operators:
+Bitwise AND (&)
+Bitwise OR (|)
+Bitwise XOR (^)
+Bitwise complement (~)
+Left shift (<<)
+Right shift (>>)
+Unsigned right shift (>>>)
+
+Ternary Operator:
+Conditional operator (?:)
+These are the most commonly used operators in Java. 
+
+7. Explain about  Increment and Decrement operators and give an example?
+Ans. Increment and decrement operators are in programming languages to increase or decrease the value of a variable by one. They are often denoted as "++" for increment and "--" for decrement.
+
+    The increment operator (++), when placed before or after a variable, adds 1 to its current value. For example, if we have a variable called "count" with an initial value of 5, using the increment operator like "count++" or "++count" will increase its value to 6. The increment operator can be used in various situations, such as in loops to iterate through a set of values or to track occurrences.
+    Similarly, the decrement operator (--), when used before or after a variable, subtracts 1 from its current value. If we have a variable called "score" with an initial value of 10, using the decrement operator like "score--" or "--score" will reduce its value to 9. The decrement operator is useful for decreasing values, such as counting down or traversing through arrays or lists.
+
+    Example of increment and decrement operators:
+    int count = 5;
+    count++;  // Increment operator
+     System.out.println("Count: " + count);  // Output: Count: 6
+    int score = 10;
+    --score;  // Decrement operator
+    System.out.println("Score: " + score);  // Output: Score: 9
+
+
+
