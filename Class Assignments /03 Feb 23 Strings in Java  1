@@ -1,0 +1,49 @@
+Q.1. What is String in Java ?
+Ans.-A string is an object that represents a sequence of characters. It is a data type specifically designed to store and manipulate text-based data. The String class in Java is part of the Java standard library and provides various methods for working with strings.Strings are extensively used in Java for various purposes like storing user input, representing file paths, working with text data, and much more.
+
+Q.2.Types of String in Java are ?
+Ans.-There are three main types of strings:
+1. String (java.lang.String):
+The String class represents an immutable sequence of characters. It is the most commonly used type for working with text in Java. String objects are created using string literals or by calling the constructor of the String class. Once a String object is created, its value cannot be modified. String objects are widely used for tasks such as storing and manipulating text data.
+2. StringBuffer (java.lang.StringBuffer):
+The StringBuffer class represents a mutable sequence of characters. Unlike the String class, StringBuffer objects can be modified after they are created. StringBuffer provides methods for appending, inserting, deleting, and modifying characters within the string. It is suitable for scenarios where you need to perform extensive string manipulations and concatenate multiple strings efficiently.
+3. StringBuilder (java.lang.StringBuilder):
+The StringBuilder class is similar to StringBuffer and also represents a mutable sequence of characters. It provides similar methods for appending, inserting, deleting, and modifying characters within the string. The main difference between StringBuffer and StringBuilder is that StringBuilder is not thread-safe but generally performs faster in single-threaded environments. StringBuilder is recommended when thread safety is not a concern.
+
+
+Q.3. In how many ways can you create strings object in java ?
+Ans.-In Java, we can create string objects in several ways:
+
+1. String Literal: The most common way is to use string literals enclosed in double quotes (e.g., "Hello"). The Java compiler automatically creates a String object for each literal.
+
+2. Using the new Keyword: We can create a String object using the `new` keyword and the String class constructor. For example, `String str = new String("Hello")`.
+3. Converting Other Data Types: String objects can be created by converting other data types to strings using methods like `valueOf()` or `toString()` provided by wrapper classes (e.g., `String str = String.valueOf(10)`).
+4. StringBuilder/StringBuffer: StringBuilder or StringBuffer objects can be created using their respective constructors, and then converted to strings using the `toString()` method.
+5. Reading Input: Strings can be created by reading user input from the console or other input streams using methods like `Scanner.nextLine()` or `BufferedReader.readLine()`.
+6. String Concatenation: String objects can be created by concatenating existing strings or string literals using the `+` operator or the `concat()` method.
+
+
+Q.4. What is a string constant pool ?
+Ans.-
+The string constant pool is a special area of memory where string literals are stored. It is a part of the Java heap memory and is used to optimize memory usage and improve performance when working with strings.
+When you create a string using a string literal (e.g., "Hello"), the Java compiler checks if an identical string already exists in the string constant pool. If it does, the compiler references the existing string instead of creating a new one. This process is known as string interning. By reusing existing strings, the string constant pool reduces memory consumption, as multiple references to the same string point to a single instance in memory. This can be especially beneficial when dealing with a large number of string objects.
+The string constant pool is also important for string comparison using the `equals()` method. When comparing string objects, the `equals()` method compares their content rather than the memory addresses. With string interning, identical strings share the same memory address, ensuring accurate and efficient string comparison. It's worth noting that string literals created at runtime (dynamically) using the `new` keyword do not reside in the string constant pool. They are treated as regular objects and stored in the heap memory, resulting in a new instance even if their content is identical.
+The string constant pool in Java helps optimize memory usage, improve performance, and ensure accurate string comparison.
+
+Q.5.What do you mean by mutable and immutable objects ?
+Ans.-Mutable and immutable are terms used to describe the ability of objects to be modified after they are created.
+
+1. Mutable Objects:
+Mutable objects are objects whose state (data) can be modified after they are created. This means you can change their properties or internal values. Modifications can include updating individual fields, adding or removing elements, or altering the object's state in some way. Examples of mutable objects in Java include ArrayList, StringBuilder, and custom classes with mutable fields.
+2. Immutable Objects:
+Immutable objects, on the other hand, are objects whose state cannot be changed once they are created. This means that once an immutable object is created, its internal state remains constant throughout its lifetime. Any attempt to modify the object results in a new object being created instead. String objects in Java are a common example of immutability.
+
+Q.6.Where exactly is the string constant pool located in the memory ?
+Ans.-The string constant pool is part of the Java heap memory. The Java heap is a region of memory dedicated to storing objects created during the execution of a Java program.
+Specifically, the string constant pool resides within the heap memory. It is a special area within the heap that is reserved for storing string literals. The string constant pool is created and maintained by the Java Virtual Machine (JVM) during the program's execution.
+The heap memory is shared among all threads in a Java program, and objects within the heap are managed by the JVM's garbage collector. The string constant pool is created at the start of the program and remains throughout its execution, holding references to the unique instances of string literals.
+
+
+
+
+
