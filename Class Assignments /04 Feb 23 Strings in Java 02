@@ -1,0 +1,157 @@
+Q.1. Write a simple String program to take input from user.
+Ans.-
+
+package AssingmentCodes;
+import java.util.Scanner;
+
+
+public class UserInput {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+
+        System.out.print("Enter your name: ");
+        String name = input.nextLine();
+        System.out.println("Hello, " + name + "!");
+        input.close();
+    }
+}
+
+
+
+Q.2. How do you concatenate two strings in Java ? Give an example?
+Ans.-We can concatenate two strings using the `+` operator or the `concat()` method. 
+Example:-
+package AssingmentCodes;
+
+
+public class Concatination {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "PW";
+
+
+        // Using the + operator
+        String result1 = str1 + " " + str2;
+        System.out.println("Using + operator: " + result1);
+
+
+        // Using the concat() method
+        String result2 = str1.concat(" ").concat(str2);
+        System.out.println("Using concat() method: " + result2);
+    }
+}
+
+
+
+Q.3.How do find length of a string in java explain with an example ?
+Ans.-
+In Java, you can find the length of a string using the `length()` method of the `String` class. Here's an example:
+
+public class StringLengthExample {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        int length = str.length();
+
+        System.out.println("The length of the string is: " + length);
+    }
+}
+The `length()` method returns the number of characters in the string, including spaces and punctuation marks. In this case, the length of the string is 13.
+
+Q.4.How do you compare two strings in java ? give an example
+Ans.-In Java, you can compare two strings for equality using the `equals()` method or the `equalsIgnoreCase()` method. Here's an example that demonstrates both approaches:
+package AssingmentCodes;
+
+
+public class StringCompare {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "hello";
+
+
+        // Using the equals() method
+        boolean isEqual = str1.equals(str2);
+        System.out.println("Using equals() method: " + isEqual);
+
+
+        // Using the equalsIgnoreCase() method
+        boolean isEqualIgnoreCase = str1.equalsIgnoreCase(str2);
+        System.out.println("Using equalsIgnoreCase() method: " + isEqualIgnoreCase);
+    }
+}
+
+
+Q.5.Write a program to find the length of String “refrigerator” .
+Ans.-
+The java program for length is 
+
+public class StringLengthExample {
+    public static void main(String[] args) {
+        String str = "refrigerator";
+        int length = str.length();
+
+        System.out.println("The length of the string is: " + length);
+    }
+}
+
+Q.6.Write a program to check if the letter ‘e’ is present in the word ‘Umbrella’
+Ans.-
+package AssingmentCodes;
+
+
+public class CheckPresence {
+    public static void main(String[] args) {
+        String word = "Umbrella";
+        char searchChar = 'e';
+
+
+        boolean isPresent = false;
+
+
+        for (int i = 0; i < word.length(); i++) {
+            if (word.charAt(i) == searchChar) {
+                isPresent = true;
+                break;
+            }
+        }
+        if (isPresent) {
+            System.out.println("The letter 'e' is present in the word 'Umbrella'.");
+        } else {
+            System.out.println("The letter 'e' is not present in the word 'Umbrella'.");
+        }
+    }
+}
+
+
+
+Q.7.Write a program to delete all consonants from the string “Hello, have a goof day”
+Ans.-
+package AssingmentCodes;
+
+
+public class DeleteConsonants {
+    public static void main(String[] args) {
+        String sentence = "Hello, have a good day";
+        String result = deleteConsonants(sentence);
+
+
+        System.out.println("Original sentence: " + sentence);
+        System.out.println("Result after deleting consonants: " + result);
+    }
+    public static String deleteConsonants(String str) {
+        String vowels = "AEIOUaeiou";
+        StringBuilder sb = new StringBuilder();
+
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+
+
+            // Check if the character is a vowel
+            if (vowels.indexOf(ch) != -1 || ch == ' ') {
+                sb.append(ch);
+            }
+        }
+        return sb.toString();
+    }
+}
