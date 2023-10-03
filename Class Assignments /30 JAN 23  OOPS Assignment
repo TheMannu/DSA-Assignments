@@ -1,0 +1,63 @@
+Q.1.How to create an object in java ?
+Ans.-To create an object in Java, you need to follow these steps:
+* Define a class: A class is a blueprint or template for creating objects. It defines the properties and behaviors that objects of that class will have. 
+* Instantiate an object: Once you have defined a class, you can create an object of that class using the `new` keyword. 
+* Access object members: After creating an object, you can access its properties and behaviors using the dot ( . ) operator. 
+Remember that you can create multiple objects of the same class, each with its own set of property values.
+
+Q.2. What is the use of a new keyword in java ?
+Ans.- 
+The `new` keyword is used to create an instance of a class or to allocate memory for an object. When you use the `new` keyword, you are invoking a constructor of the class to initialize the object. 
+1. Creating an Object: You can use the `new` keyword followed by the class name and parentheses to create a new instance of a class. For example:
+ClassName objectName = new ClassName();
+2. Creating an Array: You can also use the `new` keyword to create an array of objects with a specified length. For example:
+ClassName[] arrayName = new ClassName[arrayLength];
+
+Q.3. What are the different types of variable in java ?
+Ans.-
+There are several types of variables that you can use based on their scope and behavior. Here are the different types of variables in Java:
+* Local Variables: These variables are declared within a method, constructor, or a block of code and are only accessible within that particular scope. Local variables must be explicitly initialized before they can be used. 
+*  Instance Variables: Also known as member variables or fields, instance variables are declared within a class but outside any method. They are associated with instances (objects) of the class and have default values if not explicitly initialized. Instance variables can be accessed and modified within the class methods. 
+*  Static Variables: Static variables, also known as class variables, are declared with the `static` keyword. They belong to the class rather than instances of the class. Static variables are shared among all instances of the class and are initialized only once. They can be accessed directly using the class name. 
+*  Parameters: Parameters are variables declared in a method or constructor's signature. They act as placeholders for values passed into the method or constructor when they are called. Parameters have local scope and are initialized with the values passed during the method or constructor invocation. 
+
+These are the main types of variables in Java. Each type serves a different purpose and has its own scope and behavior within the program.
+
+Q.4. What is the difference between instance variable and local variables ?
+Ans.-
+Instance variables and local variables are two types of variables in Java that differ in terms of scope, lifetime, and accessibility. 
+
+Instance variables are declared within a class but outside any method or constructor. They have class-level scope, meaning they can be accessed throughout the class. They are associated with objects and exist as long as the object exists. Instance variables have default values if not explicitly initialized and can be accessed using the object reference. They are not thread-safe by default and can be accessed concurrently by multiple threads if synchronization mechanisms are not in place.
+
+Local variables, on the other hand, are declared within a method, constructor, or block of code. They have block-level scope, meaning they are only accessible within the specific block where they are declared. Local variables must be explicitly initialized before use and have no default values. They are stored on the stack and have a shorter lifetime compared to instance variables. Local variables are thread-safe by default since each thread has its own stack frame.
+
+Q.5.In which area memory is allocated for the instance variable and local variable?
+Ans.-Memory allocation for instance variables and local variables occurs in different areas of memory.
+1. Instance Variables: Memory for instance variables is allocated on the heap. The heap is a region of memory where objects and their associated instance variables are stored. Memory is allocated on the heap to store the object itself, including its instance variables. Each instance of a class has its own set of instance variables allocated on the heap.
+
+2. Local Variables: Memory for local variables is allocated on the stack. The stack is a region of memory used for storing method invocations and local variables. When a method or block of code is executed, a stack frame is created on the stack to hold information about the method's execution, including its local variables. Each time a method is invoked, a new stack frame is created, and when the method completes, the stack frame is popped off the stack, releasing the memory allocated for local variables.
+
+The memory allocated for local variables is automatically reclaimed by the Java Virtual Machine (JVM) when they go out of scope, whereas instance variables are deallocated when the object is garbage collected.
+
+Q.6.What is method overloading ?
+Ans.-Method overloading is a feature in Java that allows you to define multiple methods with the same name but different parameters within a class. It provides a way to create methods that perform similar operations but with different inputs or behaviors.
+
+In method overloading, the methods must have the same name but must have different parameter lists. The parameters can differ in terms of their number, types, or both. The return type of the method does not play a role in distinguishing overloaded methods.
+
+When a method is called, the Java compiler determines which overloaded method to execute based on the number and types of arguments passed during the method invocation. The compiler matches the arguments to the most appropriate overloaded method based on the parameter types.
+ Example of method overloading:
+
+public class MyClass {
+    public void printNumber(int num) {
+        System.out.println("The number is: " + num);
+    }
+
+    public void printNumber(double num) {
+        System.out.println("The number is: " + num);
+    }
+
+    public void printNumber(String num) {
+        System.out.println("The number is: " + num);
+    }
+}
+In the above example, the `printNumber` method is overloaded with three versions that accept an `int`, a `double`, or a `String` parameter. Depending on the argument type used during the method call, the appropriate version of the method will be executed.
