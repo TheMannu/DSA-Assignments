@@ -1,0 +1,79 @@
+Q.1. What is the default value of Array for different data types?
+Ans.-The default values of an array depend on the data type of the array elements. When an array is created, each element is automatically assigned a default value based on its data type. 
+1. Numeric Types:
+   - byte: 0
+   - short: 0
+   - int: 0
+   - long: 0L
+   - float: 0.0f
+   - double: 0.0d
+
+2. Boolean Type:
+   - boolean: false
+
+3. Character Type:
+   - char: (null character)
+
+4. Object Types (including arrays):
+   - Reference types (including objects and arrays): null
+
+Q.2.Can you pass the negative number in Array Size?
+Ans.-No, we cannot pass a negative number as the size of an array in Java. The size of an array in Java must be a non-negative integer. 
+If we attempt to create an array with a negative size, we will encounter a runtime exception called `NegativeArraySizeException`. This exception is thrown to indicate that an array has been created with a negative size, which is not allowed in Java.
+
+
+Q.3.Where does Array stored in JVM memory?
+Ans.-
+Arrays are objects, and like all objects, they are stored on the heap in the (JVM) memory.
+
+When an arrays created in Java using the `new` keyword, the JVM allocates memory on the heap to hold the elements of the array. The size of the allocated memory depends on the type of the array and the number of elements it can store. The elements of the array are stored in a contiguous block of memory.
+The array object itself, which contains information such as the length of the array, is also stored on the heap. It has a reference or memory address that allows you to access the array and its elements.
+Local variables and method parameters that hold references to arrays are stored on the stack, but the actual array objects and their elements are stored on the heap.
+
+Q.4.What are the disadvantages of Array ?
+Ans.-
+Arrays in Java have several disadvantages:
+1. Fixed Size: Arrays have a fixed size that is determined at the time of declaration. This means you need to know the number of elements in advance and cannot easily change the size dynamically.
+2. Lack of Flexibility: Arrays have a fixed data type, so all elements must be of the same type. 
+3. Inefficient Insertion/Deletion: Inserting or deleting elements in an array requires shifting all subsequent elements, which can be time-consuming and inefficient.
+4. No Built-in Methods: Arrays do not have built-in methods for common operations like sorting, searching, or filtering elements. 
+5. Null Handling: Arrays cannot contain null values directly. If you want to represent the absence of a value, y
+
+
+Q.5.What is an Anonymous Array in java ? Give an example?
+Ans.-An anonymous array is an array that is created without explicitly declaring a variable to hold it. It is created and used inline without assigning it to a variable. Anonymous arrays are typically used in situations where a temporary array is needed for a specific operation or as an argument to a method.
+Example of creating and using an anonymous array:
+public class AnonymousArrayExample {
+    public static void main(String[] args) {
+        printArray(new int[] { 1, 2, 3, 4, 5 }); // Passing anonymous array as an argument
+    }
+    public static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+Q.6.What are the different ways to traverse an Array in java ?
+Ans.-
+There are several ways to traverse an array in Java. The most common methods include using a traditional for loop with an index, using an enhanced for loop (for-each loop) to iterate over each element sequentially, using the `Arrays.stream()` method to convert the array into a stream and apply stream operations, and using the Java 8 Stream API for more advanced operations. Each method has its advantages depending on the specific requirements of the traversal, such as accessing elements by index, sequential iteration, or functional programming operations.
+
+Q.7. What is the difference between length and length() method give an example?
+Ans.-
+In Java, `length` and `length()` are used to determine the size or length of different data structures, but they are used for different types.
+
+1. `length` is a property of arrays in Java, and it returns the number of elements in the array. It is not a method but an attribute.This property is applicable only to arrays and can be accessed directly without parentheses.
+    Example:
+   int[] numbers = {1, 2, 3, 4, 5};
+   int arrayLength = numbers.length;  
+   System.out.println("Array Length: " + arrayLength);  
+
+2. `length()` is a method available for the `String` class in Java, and it returns the number of characters in the string.
+`length()` is a method and needs to be called with parentheses.
+    Example:
+   String text = "Hello, World!";
+   int stringLength = text.length();  
+   System.out.println("String Length: " + stringLength);
+
+
+
