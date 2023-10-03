@@ -1,0 +1,62 @@
+Q.1. What do u mean by an Array?
+Anwer:-An array is a data structure in programming that stores a fixed-size collection of elements of the same data type. It provides a way to organize and access multiple related values under a single variable name. Each element in an array is identified by an index, which represents its position within the array. The index starts from 0 for the first element and increments by 1 for each subsequent element. Arrays allow efficient storage and retrieval of data.
+
+Q.2. How to create an Array?
+Anwer:- It can be created by specifying its type and size.
+Example 
+1.  Int[ ] numbers = new int[5];   // Creates an integer array of size 5
+2.  String[ ] names = new String[3];    // Creates a string array of size 3
+3.  Char[ ] vowels = {'a', 'e', 'i', 'o', 'u'};    // Creates a character array with initial values
+
+Q.3.Can we change the size of an array in the runtime?
+Answer:-The size of an array is fixed once it is created, and you cannot change it directly. The size of an array is determined at the time of creation and cannot be modified during runtime. 
+
+Q.4.Can we declare an array without assigning the size of an array?
+Anwer:-Yes we can declare an array without assigning the size, but you need to specify the size later before you can use the array. Example:
+int[] numbers; // Declaring an integer array without specifying the size
+numbers = new int[5]; // Assigning the size of the array
+
+
+Q.5.What is the default value of an array?
+Answer:- When we declare an array, each element of the array is automatically initialized with a default value based on its data type. 
+ * Numeric types (byte, short, int, long, float, double):The default value is 0. 
+ * Boolean  type:  The default value is false.
+ * Char  type:    The default value is the null character 
+ * Reference types (objects and arrays):   The default value is null. 
+
+Q.6.What is a 1D array with an example?
+Answer:-
+A 1D (one-dimensional) array, also known as a single-dimensional array, is a linear data structure that stores elements of the same data type in a contiguous block of memory.
+
+Q.7.Write a program on a 2D array?
+Answer:-package AssingmentCodes;
+public class Example2DArray {
+    public static void main(String[] args) {
+            int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+      };        
+        System.out.println("Accessing elements ");
+        System.out.println(matrix[0][0]); // Output: 1
+        System.out.println(matrix[1][2]); // Output: 6
+        System.out.println(matrix[2][1]); // Output: 8
+       
+       
+        System.out.println("Modifying an element ");
+        matrix[1][1] = 55;
+        System.out.println(matrix[1][1]); // Output: 55
+       
+       
+        System.out.println("Iterating ");
+        for (int i = 0; row < matrix.length; i++) {
+            for (int col = 0; j < matrix[row].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
