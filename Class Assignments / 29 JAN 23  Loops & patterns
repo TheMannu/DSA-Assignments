@@ -1,0 +1,320 @@
+Q.1.Write a proram (WAP) to print Alphabets A,B,C,D,F,G,H using pattern programing logics ?
+Answer.-
+package Patterns;
+
+
+public class alphabetPattern {
+    public static void main(String[] args) {
+        int n = 6;
+        for (int i = 0; i <= n; i++) {
+//  For 'A' pattern
+            for (int j = 0; j <= n ; j++) {
+                if (i==0 && j>0 && j<n || j==0 && 0<i || j==n && i>0 || i==n/2) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.print("  ");
+ // For 'B' pattern
+            for (int j = 0; j <= n ; j++) {
+                if (i==0 && j<n || j==0 || j==n && i>0 && i<n || i==n/2 || i==n && j<n) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.print("  ");
+//  For 'C' pattern
+            for (int j = 0; j <= n ; j++) {
+                if (i==0 && j>0 && j<n || i==n && j>0 && j<n || j==0 && i>0 && i<n || j==n && i>0  && i<n/3 || i>n-(n/3) && j==n && i<n ) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.print("  ");
+//  For 'D' pattern
+            for(int j=0; j<=n; j++){
+                if(i==0 && j>0 && j<n || j==0 || j==n && i>0 && i<n || i==n && j<n){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.print("  ");
+//  For 'E' pattern
+            for(int j=0; j<=n-2; j++){
+                if (i==0 || i==n/2 || i==n || j==0){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.print("  ");
+//  For 'F' pattern
+            for(int j=0; j<=n-2; j++){
+                if(i==0 || i==n/2  && j<n/2 || j==0){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.print("  ");
+//For 'G' pattern
+            for(int j=0; j<=n; j++){
+                if(i==0 && j>0 || i==n/2 && j>n/2 || i==n && j>0 && j<n || j==n && i>n/2 || j==0 && i>0 && i<n){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.print("  ");
+//For 'H' pattern
+            for(int j=0; j<=n; j++){
+                if (i==n/2 || j==0 || j==n){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }          
+            System.out.println();
+        }
+    }
+}    
+
+
+
+
+
+
+Q. 2. Write a program to wrint triangle using star pattern programming logic ?
+Answer :- 
+package Patterns;
+
+
+import java.util.Scanner;
+
+
+public class triangleStar {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the no of base stars");
+        int n = input.nextInt();
+        input.close();
+        for (int i=0; i<=n; i++){
+            for(int j=0; j<=i; j++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+Q. 3. Write a program for Tample Pattern .
+Answer :- 
+package Patterns;
+
+
+public class tamplePattern {
+    public static void main(String[] args) {
+        int n = 14;
+        for(int i=0; i<=n; i++){
+            for(int j=0; j<=n; j++){
+                if(i==0 && j<=(n)/2 || j==0 && i<=(n)/2 || i+j<=(n)/2  
+                || i==0 && j>=(n)/2 || j==n && i<=(n)/2 || j-i>=(n)/2
+                || i==n || j==0 && i>=n/2 || j==n && i>=n/2 ){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+Q. 4. Write a program for PW SKILLS using Pattern Programming logic.
+Answer:-
+package Patterns;
+
+
+public class patternPWSKILLS {
+    public static void main(String[] args) {
+        int n = 6;
+        for(int i=0; i<=n; i++){
+            // pattern for 'P'
+            for(int j=0; j<=n; j++){
+                if(i==0 && j>0 && j<n-(n/3) || j==0 && i>0 && i<n+(n/3) ||
+                 j==n-(n/3) && i>0 && i<n/2 || i==n/2 && j>0 && j<n-(n/3)){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // pattern for 'W'
+            System.out.print("");
+            for(int j=0; j<=n; j++){
+                if(j==0 || j==n || i==j && i>n/2 || j+i==n && i>=n/2){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // pattern for 'S'
+            System.out.print("       ");
+            for(int j=0; j<=n; j++){
+                if(i==0 && j>0 && j<n || j==0 && i<n/2 && i>0
+                || j==n && i<n/3 && i>0 || j==n && i>(n/2) && i<n
+                || i==n/2 && j>0 && j<n || i==n && j>0 && j<n
+                || j==0 && i>n-(n/3) && i<n){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // pattern for 'K'
+            System.out.print("  ");
+            for(int j=0; j<=n; j++){
+                if(j==0 || i+j == n-(n/3) || i-j == (n/3) ){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            //pattern for 'I
+            System.out.print("");
+            for(int j=0; j<=n; j++){
+                if (i==0 || i==n || j==n/2){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            //pattern for 'L'
+            System.out.print("   ");
+            for(int j=0; j<=n; j++){
+                if(j==0 || i==n && j<=n-(n/4)){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            //pattern for 'L'
+            System.out.print(" ");
+            for(int j=0; j<=n; j++){
+                if(j==0 || i==n && j<=n-(n/4)){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // pattern for 'S'
+            System.out.print(" ");
+            for(int j=0; j<=n; j++){
+                if(i==0 && j>0 && j<n || j==0 && i<n/2 && i>0
+                || j==n && i<n/3 && i>0 || j==n && i>(n/2) && i<n
+                || i==n/2 && j>0 && j<n || i==n && j>0 && j<n
+                || j==0 && i>n-(n/3) && i<n){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+Q. 5. Write a program for ASHWANI  using Pattern Programming logic.
+Answer:-
+package Patterns;
+
+
+public class patternASHWANI {
+    public static void main(String[] args) {
+        int n = 6;
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= n ; j++) {
+                if (i==0 && j>0 && j<n || j==0
+                && 0<i || j==n && i>0 || i==n/2) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // pattern for 'S'
+            System.out.print("  ");
+            for(int j=0; j<=n; j++){
+                if(i==0 && j>0 && j<n || j==0 && i<n/2 && i>0
+                || j==n && i<n/3 && i>0 || j==n && i>(n/2) && i<n
+                || i==n/2 && j>0 && j<n || i==n && j>0 && j<n
+                || j==0 && i>n-(n/3) && i<n){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // pattern for 'H'
+            System.out.print("  ");
+            for(int j=0; j<=n; j++){
+                if (i==n/2 || j==0 || j==n){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // pattern for 'w'
+            System.out.print("  ");
+            for(int j=0; j<=n; j++){
+                if(j==0 || j==n || i==j && i>n/2 || j+i==n && i>=n/2){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // pattern for 'A'
+            System.out.print("  ");
+            for (int j = 0; j <= n ; j++) {
+                if (i==0 && j>0 && j<n || j==0 && 0<i
+                || j==n && i>0 || i==n/2) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // pattern for 'N'
+            System.out.print("  ");
+            for(int j=0; j<=n; j++){
+                if( i==j || j==0 || j==n){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            // pattern for 'I'
+            System.out.print("  ");
+            for(int j=0; j<=n; j++){
+                if (i==0 || i==n || j==n/2){
+                    System.out.print("* ");
+                } else {
+                    System.out.print("  ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
